@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+bool Serch(int* a, int n)
+{
+    int l = 0; r = sizeof a / size int;
+    while(l <= r)
+    {
+        int mid = (r + l) / 2;
+        if (*(a + mid) == n) return true;
+        l++; r--;
+    }
+    return false;
+}
+
+int main()
+{
+    int a[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int n; cin >> n;
+    cout << Serch(a, n);
+    return 0;
+}
