@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+#include <cstring>
+using namespace std;
+int main(int argc, char* argv[]) {
+    if (argc != 3) {
+        cerr << "Sử dụng: " << argv[0] << " <xâu thứ nhất> <xâu thứ hai>" << std::endl;
+        return 1;
+    }
+    const char* str1 = argv[1];
+    const char* str2 = argv[2];
+
+    int count = 0;
+    int len1 = strlen(str1);
+    int len2 = strlen(str2);
+    for (int i = 0; i <= len2 - len1; ++i) {
+        if (std::strncmp(str2 + i, str1, len1) == 0) {
+            ++count;
+        }
+    }
+    cout << count;
+    return 0;
+}
